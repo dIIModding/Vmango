@@ -1,69 +1,120 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# NOTE! Please use 'git-ls-files -i --exclude-standard'
+# command after changing this file, to see if there are
+# any tracked files which get ignored after the change.
+#
+# Normal rules
+#
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
+*.o.*
 *.a
-*.lib
+*.so
+*.so.dbg
+*.bin
+*.gz
 
-# Executables
-*.exe
-*.out
-*.app
+# Visual studio solution files
+*.tlog
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.db
+*.opendb
+*.exp
+*.res
+CMakeSettings.json
+/out/
 
-# Build directories
-build/
-Build/
-build-*/
+# CLion files
+cmake-build-*
 
-# CMake generated files
-CMakeFiles/
+#
+# Top-level generic files
+#
+/bin/
+/build/
+/run/
+/opt/
+tags
+TAGS
+!.gitignore
+!.gitattributes
+
+#
+# Build generated files
+#
+autom4te.cache
+
+#
+# Editors / debuggers / other output files
+#
+*~
+*.bak
+*.orig
+*.patch
+callgrind.out.*
+
+#
+# Git stuff
+#
+# stgit directories
+patches-*
+
+#
+# VS binaries output
+#
+bin/*
+win/*
+
+#
+# VS temporary files
+#
+*.ncb
+*.suo
+*.sdf
+*.opensdf
+*.sln.cache
+*.vsp
+ipch
+*.user
+
+#
+# CMake temporary files
+#
+CMakeFiles
 CMakeCache.txt
 cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
 
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
+#
+# OS specific
+#
+# MacOS
+.DS_Store
 
-# vcpkg
-vcpkg_installed/
+# CLion / JetBrain Tools
+# But allow premade code style
+.idea/*
+!.idea/codeStyles/
 
-# debug information files
-*.dwo
+# VSCode
+.vscode
 
-# test output & cache
-Testing/
-.cache/
+# Nostalrius
+newsletter
+patch
+php
+
+sql/migrations/*.py
+sql/migrations/characters_db_updates.sql
+sql/migrations/logon_db_updates.sql
+sql/migrations/logs_db_updates.sql
+sql/migrations/world_db_updates.sql
+
+# Generating by CMake
+revision.h
+migrations_list.h
+Progression.h
